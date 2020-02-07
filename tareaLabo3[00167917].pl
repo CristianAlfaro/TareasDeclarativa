@@ -45,6 +45,16 @@ conecta_con(kiosko,jardin).
 esta_en(flor,'cuarto de rodri').
 esta_en(pelota,jardin).
 esta_en(carne,cocina).
+esta_en(control, sala).
+esta_en(cuaderno, 'cuarto de estudio').
+esta_en(silla, comedor).
+esta_en(agua, cocina).
+esta_en('papel higienico', bano).
+esta_en(pantunflas, 'cuarto de rodri').
+esta_en(pisto, 'cuarto papas').
+esta_en(flores, jardin).
+esta_en(limones, jardin).
+esta_en(jabon, lavadero).
 
 
 jarvis_traeme(X,LugarActual):-
@@ -79,8 +89,4 @@ imprimir_camino():-
     forall(visitado(X), write_ln(X)),
     write_ln('EL OBJETO A SIDO ENCONTRADO, LO LLEVARE AL LUGAR ADONDE ESTAS'),
     forall(camino_regreso(Y),write_ln(Y)),
-    write_ln('TAREA FINALIZADA'),!.
-    
-    
-    
-    
+    write_ln('TAREA FINALIZADA'),!.    
